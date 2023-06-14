@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="clase.css">
+</head>
+
+<body>
+    <div id="contenedor">
+        <div id="cabezal" class="clearfix">
+            <img id="logo" src="https://p1.develotion.com/2023_03/logo.jpg" alt="logo">
+            <ul id="navPrincipal">
+                <li id="btnSeccionRegistroCensistas" class="btn">
+                    <a>1. Registrar censista</a>
+                </li>
+                <li id="btnSeccionIngresarCensista" class="btn">
+                    <a>2. Ingresar censista</a>
+                </li>
+                <li id="btnSeccionIngresarDatos" class="btn">
+                    <a>3. Ingresar Datos</a>
+                </li>
+                <li id="btnSeccionVerificarDatos" class="btn">
+                    <a>4. Verificar Datos Precargados</a>
+                </li>
+                <li id="btnSeccionReasignarPersona" class="btn">
+                    <a>5. Reasignar persona para validar</a>
+                </li>
+                <li id="btnSeccionVisualizarInformacion" class="btn">
+                    <a>6. Visualizar información estadística</a>
+                </li>
+            </ul>
+            <div id="aux">
+                <a id="txtUsuarioCensistaActivo">Censista</a> | <a>Invitado</a> | <a id="txtSalir">Salir</a>
+            </div>
+        </div>
+
+
+
+        <div id="contenido">
+            <div id="seccionRegistroCensistas" class="seccion">
+                <div id="contenedor">
+
+                    <h1>Registro de Censista</h1>
+                    <div id="nombre">
+                        <label for="txtNombre1">Nombre:</label>
+                        <input type="text" id="txtNombre1">
+                    </div><br>
+                    <div id="usuario">
+                        <label for="txtUsuario1">Nombre de usuario:</label>
+                        <input type="text" id="txtUsuario1">
+                    </div><br>
+                    <div id="contraseña">
+                        <label for="txtContraseña1">Contraseña:</label>
+                        <input type="password" id="txtContraseña1">
+                    </div><br>
+                    <button id="btnRegistrar">Registrar</button>
+                </div>
+            </div>
+
+
+            <div id="seccionIngresarCensista" class="seccion">
+                <h1>Ingresar</h1>
+                <div id="usuario">
+                    <label for="txtUsuario2">Nombre de usuario:</label>
+                    <input type="text" id="txtUsuario2">
+                </div><br>
+                <div id="contraseña">
+                    <label for="txtContraseña2">Contraseña:</label>
+                    <input type="password" id="txtContraseña2">
+                </div><br>
+                <input type="button" value="Ingresar" id="btnIngresar">
+            </div>
+
+
+            <div id="seccionIngresarDatos" class="seccion">
+                <h1>Ingresar datos de una persona censada.</h1>
+                <label for="txtNombre3">Nombre:</label>
+                <input type="text" id="txtNombre3"><br>
+                <div id="container">
+
+
+                    <div class="form-group">
+                        <label for="txtApellido3">Apellido:</label>
+                        <input type="text" id="txtApellido3">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtEdad3">Edad:</label>
+                        <input type="number" id="txtEdad3" min="0" max="130">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtCedula3">Cédula:</label>
+                        <input type="text" id="txtCedula3">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtDepartamento3">Departamento de residencia:</label>
+                        <select id="txtDepartamento3">
+                            <option value="">Seleccione...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtOcupacion3">Ocupación:</label>
+                        <select id="txtOcupacion3">
+                            <option value="">Seleccione...</option>
+                            <option value="dependiente">Dependiente</option>
+                            <option value="independiente">Independiente</option>
+                            <option value="estudiante">Estudiante</option>
+                            <option value="no trabaja">No trabaja</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtCensado3">Censado:</label>
+                        <select id="txtCensado3">
+                            <option value="">Seleccione...</option>
+                            <option value=true>SI</option>
+                            <option value=false>NO</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="txtCensado3">Censista:</label>
+                        <select id="txtCensado3">
+                            <option value="">Seleccione...</option>
+
+                        </select>
+                    </div>
+                </div>
+                <input type="button" value="Agregar" id="btnAgregar">
+                <p id="pMensajes"></p>
+            </div>
+
+
+
+
+            <div id="seccionVerificarDatos" class="seccion">
+                <h1>Verificar Datos Precargados</h1>
+                <div id="usuario">
+                    <label for="txtCedula4">Cedula:</label>
+                    <input type="text" id="txtCedula4">
+                </div><br>
+                <input type="button" value="Verificar" id="btnVerificar">
+                <p id="pVerificar">X</p>
+            </div>
+
+
+
+            <div id="seccionReasignarPersona" class="seccion">
+                <h1>Reasignar persona para validar</h1>
+
+                <div class="form-group">
+                    <label for="personas-pendientes">Personas pendientes de validar datos:</label>
+                    <select id="personas-pendientes" class="form-control">
+                        <option value="">Seleccione...</option>
+                        <!-- Aquí se cargarían las opciones dinámicamente con JavaScript -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="censistas">Censistas disponibles:</label>
+                    <select id="censistas" class="form-control">
+                        <option value="">Seleccione...</option>
+                        <!-- Aquí se cargarían las opciones dinámicamente con JavaScript -->
+                    </select>
+                </div>
+                <input type="button" value="Reasignar" id="btnReasignar">
+            </div>
+
+
+
+            <div id="seccionVisualizarInformacion" class="seccion">
+                <h1>Visualizar información estadística</h1>
+
+                <h2>Total de personas censadas hasta el momento:</h2>
+                <p id="total-censadas"></p>
+
+                <h2>Cantidad de personas censadas por departamento:</h2>
+                <ul id="personas-por-departamento"></ul>
+
+                <h2>Porcentaje de personas pendientes de validar datos:</h2>
+                <p id="porcentaje-pendientes"></p>
+
+                <h2>Seleccionar un departamento:</h2>
+                <select id="departamentos">
+                    <!-- Aquí se cargarían las opciones de los departamentos dinámicamente con JavaScript -->
+                </select>
+
+                <h3>Porcentaje de personas censadas menores de edad:</h3>
+                <p id="porcentaje-menores"></p>
+
+                <h3>Porcentaje de personas censadas mayores de edad:</h3>
+                <p id="porcentaje-mayores"></p>
+            </div>
+        </div><!-- FIN CONTENIDO -->
+
+
+
+
+
+
+        <div id="pie">
+            <a href="https://www.ort.edu.uy">Footer</a>
+        </div><!-- FIN PIE -->
+    </div><!-- FIN CONTENEDOR -->
+    <script src="clase.js"></script>
+</body>
+
+</html>
